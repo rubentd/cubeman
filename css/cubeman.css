@@ -1,0 +1,8 @@
+.cubeman-wrap ins {
+  display: inline-block;
+  background-color: #5e5e5e;
+}
+.chead {
+  width: 50px;
+  height: 50px;
+}
