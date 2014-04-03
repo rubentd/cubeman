@@ -1,8 +1,174 @@
-.cubeman-wrap ins {
-  display: inline-block;
-  background-color: #5e5e5e;
+.cubeman-all {
+  -webkit-animation: spin 10s linear infinite;
 }
-.chead {
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+.cubeman-wrap {
+  -webkit-perspective: 500;
+  -webkit-perspective-origin: 50% 50%;
+  -webkit-transform-style: preserve-3d;
+  width: 50px;
+  height: 60px;
+  width: 100%;
+  -webkit-transform: rotateX(-10deg);
+}
+.cubeman-all {
+  display: inline-block;
+  -webkit-transform-style: preserve-3d;
+  width: 50px;
+  height: 200px;
+  position: relative;
+  left: 50%;
+  margin-left: -100px;
+}
+.cubeman-head {
+  -webkit-transform-style: preserve-3d;
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 60px;
+}
+.cubeman-head .face {
+  position: absolute;
+  border: 1px dashed #5e5e5e;
+  outline: 1px solid transparent;
+  -webkit-transform-origin: center center;
+  background-color: #eee;
+}
+.cubeman-head .face.front {
+  width: 50px;
+  height: 60px;
+  -webkit-transform: translateZ(25px);
+}
+.cubeman-head .face.back {
+  width: 50px;
+  height: 60px;
+  -webkit-transform: translateZ(-25px) rotate(180deg);
+}
+.cubeman-head .face.left {
+  width: 50px;
+  height: 60px;
+  -webkit-transform: rotateY(270deg) translateZ(25px);
+}
+.cubeman-head .face.right {
+  width: 50px;
+  height: 60px;
+  -webkit-transform: rotateY(-270deg) translateZ(25px);
+}
+.cubeman-head .face.top {
   width: 50px;
   height: 50px;
+  -webkit-transform: rotateX(-90deg) translateZ(35px);
+}
+.cubeman-head .face.bottom {
+  width: 50px;
+  height: 50px;
+  -webkit-transform: rotateX(90deg) translateZ(25px);
+}
+.cubeman-body {
+  -webkit-transform: translateX(12.5px) translateY(60px);
+  -webkit-transform-style: preserve-3d;
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+  height: 40px;
+}
+.cubeman-body .face {
+  position: absolute;
+  border: 1px dashed #5e5e5e;
+  outline: 1px solid transparent;
+  -webkit-transform-origin: center center;
+  background-color: #eee;
+}
+.cubeman-body .face.front {
+  width: 25px;
+  height: 40px;
+  -webkit-transform: translateZ(12.5px);
+}
+.cubeman-body .face.back {
+  width: 25px;
+  height: 40px;
+  -webkit-transform: translateZ(-12.5px) rotate(180deg);
+}
+.cubeman-body .face.left {
+  width: 25px;
+  height: 40px;
+  -webkit-transform: rotateY(270deg) translateZ(12.5px);
+}
+.cubeman-body .face.right {
+  width: 25px;
+  height: 40px;
+  -webkit-transform: rotateY(-270deg) translateZ(12.5px);
+}
+.cubeman-body .face.top {
+  width: 25px;
+  height: 25px;
+  -webkit-transform: rotateX(-90deg) translateZ(27.5px);
+}
+.cubeman-body .face.bottom {
+  width: 25px;
+  height: 25px;
+  -webkit-transform: rotateX(90deg) translateZ(12.5px);
+}
+.cubeman-limb {
+  -webkit-transform-style: preserve-3d;
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 40px;
+}
+.cubeman-limb .face {
+  position: absolute;
+  border: 1px dashed #5e5e5e;
+  outline: 1px solid transparent;
+  -webkit-transform-origin: center center;
+  background-color: #eee;
+}
+.cubeman-limb .face.front {
+  width: 10px;
+  height: 40px;
+  -webkit-transform: translateZ(5px);
+}
+.cubeman-limb .face.back {
+  width: 10px;
+  height: 40px;
+  -webkit-transform: translateZ(-5px) rotate(180deg);
+}
+.cubeman-limb .face.left {
+  width: 10px;
+  height: 40px;
+  -webkit-transform: rotateY(270deg) translateZ(5px);
+}
+.cubeman-limb .face.right {
+  width: 10px;
+  height: 40px;
+  -webkit-transform: rotateY(-270deg) translateZ(5px);
+}
+.cubeman-limb .face.top {
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotateX(-90deg) translateZ(35px);
+}
+.cubeman-limb .face.bottom {
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotateX(90deg) translateZ(5px);
+}
+.cubeman-limb.left-arm {
+  -webkit-transform: translateY(60px) translateX(-5px) rotateZ(10deg);
+}
+.cubeman-limb.right-arm {
+  -webkit-transform: translateY(60px) translateX(45px) rotateZ(-10deg);
+}
+.cubeman-limb.left-leg {
+  -webkit-transform: translateY(100px) translateX(10px);
+}
+.cubeman-limb.right-leg {
+  -webkit-transform: translateY(100px) translateX(30px);
 }

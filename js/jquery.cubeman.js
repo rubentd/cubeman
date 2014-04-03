@@ -16,13 +16,45 @@
 
  		create: function(){
  			this.bearer.addClass("cubeman-wrap");
- 			var cubemanStructure = "<ins class='cubeman-head'>" +
- 				"<ins class='chead front'></ins>" +
- 				"<ins class='chead back'></ins>" +
- 				"<ins class='chead top'></ins>" +
- 				"<ins class='chead bottom'></ins>" +
- 				"<ins class='chead left'></ins>" +
- 				"<ins class='chead right'></ins>" +
+ 			
+			var cubeContent = "<ins class='face front'></ins>" +
+ 				"<ins class='face back'></ins>" +
+ 				"<ins class='face top'></ins>" +
+ 				"<ins class='face bottom'></ins>" +
+ 				"<ins class='face left'></ins>" +
+ 				"<ins class='face right'></ins>"; 
+
+ 			var head = "<ins class='cubeman-head'>" +
+ 				cubeContent +
+ 				"</ins>";
+
+ 			var body = "<ins class='cubeman-body'>" +
+ 				cubeContent +
+ 				"</ins>";
+
+ 			var leftArm = "<ins class='cubeman-limb left-arm'>" +
+ 				cubeContent +
+ 				"</ins>";
+
+ 			var rightArm = "<ins class='cubeman-limb right-arm'>" +
+ 				cubeContent +
+ 				"</ins>";
+
+ 			var leftLeg = "<ins class='cubeman-limb left-leg'>" +
+ 				cubeContent +
+ 				"</ins>";
+
+ 			var rightLeg = "<ins class='cubeman-limb right-leg'>" +
+ 				cubeContent +
+ 				"</ins>";
+
+ 			var cubemanStructure = "<ins class='cubeman-all'>" +
+ 				head +
+ 				body + 
+ 				leftArm + 
+ 				rightArm + 
+ 				leftLeg + 
+ 				rightLeg + 
  				"</ins>";
  			this.bearer.append(cubemanStructure);
  		}
