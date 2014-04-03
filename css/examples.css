@@ -1,3 +1,19 @@
+#cubeman{
+	position:absolute;
+	left:150px;
+	width:150px;
+}
+
+#spiderman{
+	position:absolute;
+	left:350px;	
+	width:150px;
+}
+
+.cubemen{
+	height:180px;
+}
+
 body{
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: 14px;

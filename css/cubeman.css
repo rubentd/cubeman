@@ -1,13 +1,8 @@
-.cubeman-all {
-  -webkit-animation: spin 10s linear infinite;
+#cubeman {
+  margin-top: 50px;
 }
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-  }
+#spiderman {
+  margin-top: 150px;
 }
 .cubeman-wrap {
   -webkit-perspective: 500;
@@ -49,7 +44,7 @@
 .cubeman-head .face.back {
   width: 50px;
   height: 60px;
-  -webkit-transform: translateZ(-25px) rotate(180deg);
+  -webkit-transform: translateZ(-25px) rotateY(180deg);
 }
 .cubeman-head .face.left {
   width: 50px;
@@ -94,7 +89,7 @@
 .cubeman-body .face.back {
   width: 25px;
   height: 40px;
-  -webkit-transform: translateZ(-12.5px) rotate(180deg);
+  -webkit-transform: translateZ(-12.5px) rotateY(180deg);
 }
 .cubeman-body .face.left {
   width: 25px;
@@ -138,7 +133,7 @@
 .cubeman-limb .face.back {
   width: 10px;
   height: 40px;
-  -webkit-transform: translateZ(-5px) rotate(180deg);
+  -webkit-transform: translateZ(-5px) rotateY(180deg);
 }
 .cubeman-limb .face.left {
   width: 10px;
@@ -171,4 +166,51 @@
 }
 .cubeman-limb.right-leg {
   -webkit-transform: translateY(100px) translateX(30px);
+}
+.spiderman .face {
+  background-image: url('../img/skin-spiderman.png');
+  background-repeat: no-repeat;
+  border: none !important;
+  background-size: 200px 200px;
+}
+.spiderman .cubeman-head .front {
+  background-position: -50px -50px;
+}
+.spiderman .cubeman-head .back {
+  background-position: -150px -50px;
+}
+.spiderman .cubeman-head .left {
+  background-position: 0 -50px;
+}
+.spiderman .cubeman-head .right {
+  background-position: -100px -50px;
+}
+.spiderman .cubeman-head .top {
+  background-position: -50px 0;
+}
+.spiderman .cubeman-head .bottom {
+  background-position: 0 0;
+}
+.spiderman .cubeman-body .front {
+  background-position: -25px -110px;
+}
+.spiderman .cubeman-body .back {
+  background-position: -50px -110px;
+}
+.spiderman .cubeman-body .left {
+  background-position: 0 -110px;
+}
+.spiderman .cubeman-body .right {
+  background-position: -75px -110px;
+}
+.cubeman-all {
+  -webkit-animation: spin 10s linear infinite;
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
 }

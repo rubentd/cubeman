@@ -1,4 +1,12 @@
-@import "animations.less";
+#cubeman{
+	margin-top:50px;
+}
+
+#spiderman{
+	margin-top:150px;
+}
+
+//BASE:
 
 @head-width:50px;
 @head-height:60px;
@@ -86,7 +94,7 @@
 		&.back{
 			width:@width;
 			height:@height;
-			-webkit-transform:translateZ(-@depth/2) rotate(180deg);
+			-webkit-transform:translateZ(-@depth/2) rotateY(180deg);
 		}
 
 		&.left{
@@ -115,4 +123,64 @@
 	}
 }
 
+//SKINS
+//Spiderman skin
+.spiderman{
 
+	.face{
+		background-image:url('../img/skin-spiderman.png');
+		background-repeat:no-repeat;
+		border:none !important;
+		background-size:200px 200px;
+	}
+
+	.cubeman-head{
+		.front{
+			background-position:-50px -50px;
+		}
+		.back{
+			background-position:-150px -50px;
+		}
+		.left{
+			background-position:0 -50px;
+		}
+		.right{
+			background-position:-100px -50px;
+		}
+		.top{
+			background-position:-50px 0;
+		}
+		.bottom{
+			background-position:0 0;
+		}
+	}
+
+	.cubeman-body{
+		.front{
+			background-position:-25px -110px;
+		}
+		.back{
+			background-position:-50px -110px;
+		}
+		.left{
+			background-position:0 -110px;
+		}
+		.right{
+			background-position:-75px -110px;
+		}
+	}
+}
+
+//ANIMATIONS:
+.cubeman-all{
+	-webkit-animation:spin 10s linear infinite;
+}
+
+@-webkit-keyframes spin{
+	from{
+		-webkit-transform:rotateY(0deg);
+	}
+	to{
+		-webkit-transform:rotateY(360deg);
+	}
+}
